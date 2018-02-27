@@ -47,9 +47,9 @@ public class WordCountJob2 {
         job.setReducerClass(IntSumReducer.class);
         job.setOutputKeyClass(Text.class);
       /*  job.setPartitionerClass(HashPartitioner.class);*/
-        job.setPartitionerClass(HashPartitioner.class);
+        job.setPartitionerClass(NumberPartitionner.class);
         job.setOutputValueClass(IntWritable.class);
-        job.setNumReduceTasks(1);
+        job.setNumReduceTasks(2);
         job.waitForCompletion(true);
 
 
